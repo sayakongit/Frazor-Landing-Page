@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,6 +21,7 @@
     <!-- Facicon  -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
     <!-- Icons  -->
     <script
       type="module"
@@ -302,7 +308,6 @@
 
         <div class="team-items" data-aos="fade-up">
           <div class="team-card">
-            >
             <img src="./img/team1.png" alt="" />
             <div class="team-title">
               <h3 class="team-name">Abhinav jain</h3>
@@ -480,7 +485,7 @@
         <div class="contact-box" data-aos="fade-up">
           <div class="con-title">
             <h2>Get in Touch with Frazor</h2>
-            <button type="button" class="btn">Contact Us</button>
+            <button type="button" class="btn" id="btn-modal">Contact Us</button>
           </div>
           <div class="con-img">
             <img
@@ -497,7 +502,6 @@
     </section>
 
     <!-- Footer  -->
-    <!-- Site footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="f-row">
@@ -572,20 +576,16 @@
         <hr />
       </div>
       <div class="container">
-        <div class="f-row">
-          <div
-            class="col-md-8 col-sm-6 col-xs-12"
-            data-aos="fade-right"
-            data-aos-offset="100"
-          >
+        <div class="f-row f-low">
+          <div class="" data-aos="fade-up" data-aos-offset="100">
             <p class="copyright-text">
               Copyright &copy; 2017 All Rights Reserved by
               <a href="#">Frazor Enterprise</a>.
             </p>
           </div>
 
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons" data-aos="fade-left" data-aos-offset="100">
+          <div class="">
+            <ul class="social-icons" data-aos="fade-up" data-aos-offset="100">
               <li>
                 <a class="facebook" href="#"
                   ><i class="fab fa-facebook-f"></i
@@ -602,10 +602,83 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal-bg">
+      <div class="modal">
+        <div class="con-details">
+          <div class="con-data">
+            <h2>Have a query? Let's talk.</h2>
+            <span class="info"
+              ><ion-icon name="call-outline"></ion-icon> +91 7014 326179</span
+            >
+
+            <span class="info"
+              ><ion-icon name="mail-outline"></ion-icon> contact@frazor.me</span
+            >
+            <span class="info"
+              ><ion-icon name="location-outline"></ion-icon> 173, Ashwini Bazaar
+              Road, City's Prime Health Care Area, Udaipur, Rajasthan</span
+            >
+          </div>
+          <div class="con-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.0842293764463!2d73.69181881499742!3d24.586289184183986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e570d87573e9%3A0xe310355f0fb7eecf!2s173%2C%20Ashwini%20Bazaar%20Rd%2C%20City&#39;s%20Prime%20Health%20Care%20Area%2C%20Udaipur%2C%20Rajasthan%20313001!5e0!3m2!1sen!2sin!4v1640703132977!5m2!1sen!2sin"
+              width="300"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <div class="con-form">
+          <div class="form-control">
+            <label for="name">Full Name</label>
+            <input type="text" placeholder="Your Name" id="name" name="name" />
+          </div>
+          <div class="form-control">
+            <label for="phone">Phone</label>
+            <input
+              type="phone"
+              placeholder="Your Phone Number"
+              id="phone"
+              name="phone"
+            />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              placeholder="Your Email"
+              id="email"
+              name="email"
+            />
+          </div>
+          <div class="form-control">
+            <label for="area">Message</label>
+            <textarea
+              name="area"
+              id="area"
+              cols="30"
+              rows="10"
+              placeholder="Your Message Here"
+            ></textarea>
+          </div>
+          <button class="btn btn-form" type="button">Submit</button>
+        </div>
+        <span class="btn-close"
+          ><ion-icon name="close-circle-outline"></ion-icon
+        ></span>
+      </div>
+    </div>
+
+    <!-- JavaScript  -->
+
     <script>
       AOS.init({
-        offset: 280,
-        duration: 2000,
+        offset: 240,
+        duration: 1200,
         once: true,
       });
     </script>
@@ -653,5 +726,6 @@
         }
       });
     </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
