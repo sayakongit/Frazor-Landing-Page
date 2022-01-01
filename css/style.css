@@ -149,8 +149,10 @@ nav {
 }
 
 .home-content img {
-  width: 500px;
-  height: 480px;
+  /* width: 40%; */
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   /* border: 1px solid black; */
 }
 
@@ -188,6 +190,7 @@ nav {
   border-radius: 7px;
   font-size: 18px;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -762,6 +765,24 @@ nav {
   border-radius: 6px;
 }
 
+/* Hamburger Menu  */
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  background-color: #6c09c9;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     width: auto;
@@ -769,18 +790,23 @@ nav {
     padding: 40px 20px;
   }
 
+  #home .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+  }
+
   .home-content {
     flex-direction: column-reverse;
-    height: 100vh;
+    height: auto;
     justify-content: center;
-    margin-bottom: 40px;
+    align-items: center;
   }
 
   #scroll-gif {
-    display: none;
-  }
-
-  .nav-links {
     display: none;
   }
 
@@ -802,8 +828,9 @@ nav {
   }
 
   .home-content img {
-    width: 320px;
-    height: 300px;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
   }
 
   .btn {
@@ -832,7 +859,7 @@ nav {
   .rewards {
     border-radius: 12px;
     padding: 40px;
-    margin: 60px 60px 0 60px;
+    margin-top: 60px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     flex-direction: column;
@@ -901,6 +928,14 @@ nav {
     text-align: center;
   }
 
+  .service-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .service-text .badge-cursive {
+    font-size: 1.4rem;
+  }
+
   .circle {
     height: 20px;
     width: 20px;
@@ -924,6 +959,7 @@ nav {
     padding-top: 30px;
     align-items: center;
     justify-items: center;
+    margin-top: 20px;
   }
 
   .team-card img {
@@ -1030,5 +1066,61 @@ nav {
 
   .social-icons {
     margin-top: 10px;
+  }
+
+  .modal {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  .btn-close {
+    position: fixed;
+    right: 20px;
+  }
+
+  .con-details {
+    width: auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-links {
+    position: fixed;
+    /* left: -100%; */
+    top: -100%;
+    left: 0;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.6s;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    z-index: -4;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+    display: block;
+  }
+
+  .nav-links.active {
+    top: 70px;
   }
 }

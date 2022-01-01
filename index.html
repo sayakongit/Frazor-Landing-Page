@@ -31,11 +31,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
-    <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -50,9 +45,17 @@
     <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
 
     <!-- External JS  -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
     <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_j45zP2sSdepn9j9nWi5xK");
+      })();
+    </script>
 
     <title>Frazor | The Best Fintech Service</title>
   </head>
@@ -64,18 +67,31 @@
             <img src="./img/logo.png" alt="logo" />
           </div>
           <ul class="nav-links">
-            <a href="#home"><li>Home</li></a>
-            <a href="#about"><li>About</li></a>
-            <a href="#services"><li>Services</li></a>
-            <a href="#team"><li>Team</li></a>
-            <a href="#testimonials"><li>Testimonials</li></a>
-            <a href="#contact"><li>Contact Us</li></a>
+            <a href="#home" class="nav-item"><li class="nav-link">Home</li></a>
+            <a href="#about" class="nav-item"
+              ><li class="nav-link">About</li></a
+            >
+            <a href="#services" class="nav-item"
+              ><li class="nav-link">Services</li></a
+            >
+            <a href="#team" class="nav-item"><li class="nav-link">Team</li></a>
+            <a href="#testimonials" class="nav-item"
+              ><li class="nav-link">Testimonials</li></a
+            >
+            <a href="#contact" class="nav-item"
+              ><li class="nav-link">Contact Us</li></a
+            >
           </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </nav>
       </header>
       <div class="container">
         <div class="home-content">
-          <div class="home-title" data-aos="fade-right">
+          <div class="home-title">
             <h4 class="badge">The Best Fintech Service</h4>
             <h1 class="heading-primary">
               We have your back, and
@@ -90,13 +106,13 @@
               quibusdam at dolores magni est autem perferendis? Voluptate
               delectus et fugiat, dicta obcaecati magni?
             </p>
-            <a href="#" class="btn btn-primary">
+            <a href="#contact" class="btn btn-primary">
               Get in Touch
               <!-- <ion-icon name="arrow-forward-outline"></ion-icon> -->
             </a>
           </div>
 
-          <img src="./img/home.png" alt="home" data-aos="fade-left" />
+          <img src="./img/home.png" alt="home" />
         </div>
       </div>
       <a href="#about" class="anchor"
@@ -107,7 +123,7 @@
     <!-- About Us  -->
 
     <section id="about" class="container">
-      <div class="section-title" data-aos="fade-up">
+      <div class="section-title">
         <h3 class="heading-tag">About Us</h3>
         <h1 class="heading-secondary">Want to know who we are?</h1>
         <p>
@@ -115,43 +131,18 @@
           eum libero modi incidunt sapiente enim amet vitae ipsam obcaecati.
         </p>
       </div>
-      <div class="rewards" data-aos="fade-up">
+      <div class="rewards">
         <div class="reward-item">
           <p class="reward-text">Recognised by</p>
           <div class="reward-img">
-            <img
-              src="./img/reward1.png"
-              alt=""
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-offset="200"
-            />
-            <img
-              src="./img/reward2.png"
-              alt=""
-              data-aos="fade-up"
-              data-aos-delay="300"
-              data-aos-offset="200"
-            />
-            <img
-              src="./img/reward3.png"
-              alt=""
-              data-aos="fade-up"
-              data-aos-delay="600"
-              data-aos-offset="200"
-            />
+            <img src="./img/reward1.png" alt="" />
+            <img src="./img/reward2.png" alt="" />
+            <img src="./img/reward3.png" alt="" />
           </div>
         </div>
         <div class="reward-item">
           <p class="reward-text">Best start up in 2020 by</p>
-          <img
-            src="./img/reward4.png"
-            alt=""
-            class="reward-npc"
-            data-aos="fade-up"
-            data-aos-delay="900"
-            data-aos-offset="200"
-          />
+          <img src="./img/reward4.png" alt="" class="reward-npc" />
         </div>
       </div>
     </section>
@@ -159,7 +150,7 @@
     <!-- Services  -->
 
     <section id="services" class="container">
-      <div class="section-title" data-aos="fade-up">
+      <div class="section-title">
         <h3 class="heading-tag">Services</h3>
         <h1 class="heading-secondary">A brief about our works</h1>
         <p>
@@ -169,7 +160,7 @@
       </div>
 
       <div class="service-items">
-        <div class="service-flex" data-aos="fade-right" data-aos-offset="360">
+        <div class="service-flex">
           <img
             src="./img/website.png"
             alt=""
@@ -193,7 +184,7 @@
             </div>
           </div>
         </div>
-        <div class="service-flex" data-aos="fade-left" data-aos-offset="400">
+        <div class="service-flex">
           <img
             src="./img/whatsapp.png"
             alt=""
@@ -217,7 +208,7 @@
             </div>
           </div>
         </div>
-        <div class="service-flex" data-aos="fade-right" data-aos-offset="400">
+        <div class="service-flex">
           <img
             src="./img/crm.png"
             alt=""
@@ -241,7 +232,7 @@
             </div>
           </div>
         </div>
-        <div class="service-flex" data-aos="fade-left" data-aos-offset="400">
+        <div class="service-flex">
           <img
             src="./img/ecom.png"
             alt=""
@@ -265,7 +256,7 @@
             </div>
           </div>
         </div>
-        <div class="service-flex" data-aos="fade-right" data-aos-offset="400">
+        <div class="service-flex">
           <img
             src="./img/tech.png"
             alt=""
@@ -296,7 +287,7 @@
 
     <section id="team">
       <div class="container">
-        <div class="section-title" data-aos="fade-up">
+        <div class="section-title">
           <h3 class="heading-tag">Our Team</h3>
           <h1 class="heading-secondary">The minds behind Frazor</h1>
           <p>
@@ -306,7 +297,7 @@
           </p>
         </div>
 
-        <div class="team-items" data-aos="fade-up">
+        <div class="team-items">
           <div class="team-card">
             <img src="./img/team1.png" alt="" />
             <div class="team-title">
@@ -338,7 +329,7 @@
 
     <section id="testimonials">
       <div class="container">
-        <div class="section-title" data-aos="fade-up">
+        <div class="section-title">
           <h3 class="heading-tag">testimonials</h3>
           <h1 class="heading-secondary">What our customers say</h1>
           <p>
@@ -348,7 +339,7 @@
           </p>
         </div>
 
-        <div class="owl-carousel owl-theme" data-aos="fade-up">
+        <div class="owl-carousel owl-theme">
           <div class="item">
             <div class="test-card">
               <div class="quote">
@@ -364,13 +355,6 @@
                 <div class="cust-image"></div>
                 <h3>Name</h3>
                 <h4>COMPANY NAME</h4>
-                <div class="stars">
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                </div>
               </div>
             </div>
           </div>
@@ -389,13 +373,6 @@
                 <div class="cust-image"></div>
                 <h3>Name</h3>
                 <h4>COMPANY NAME</h4>
-                <div class="stars">
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                </div>
               </div>
             </div>
           </div>
@@ -414,13 +391,6 @@
                 <div class="cust-image"></div>
                 <h3>Name</h3>
                 <h4>COMPANY NAME</h4>
-                <div class="stars">
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                </div>
               </div>
             </div>
           </div>
@@ -439,13 +409,6 @@
                 <div class="cust-image"></div>
                 <h3>Name</h3>
                 <h4>COMPANY NAME</h4>
-                <div class="stars">
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                </div>
               </div>
             </div>
           </div>
@@ -464,13 +427,6 @@
                 <div class="cust-image"></div>
                 <h3>Name</h3>
                 <h4>COMPANY NAME</h4>
-                <div class="stars">
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                  <ion-icon name="star" class="star"></ion-icon>
-                </div>
               </div>
             </div>
           </div>
@@ -482,7 +438,7 @@
 
     <section id="contact">
       <div class="container">
-        <div class="contact-box" data-aos="fade-up">
+        <div class="contact-box">
           <div class="con-title">
             <h2>Get in Touch with Frazor</h2>
             <button type="button" class="btn" id="btn-modal">Contact Us</button>
@@ -505,12 +461,7 @@
     <footer class="site-footer">
       <div class="container">
         <div class="f-row">
-          <div
-            class="f-col"
-            data-aos="fade-up"
-            data-aos-delay="250"
-            data-aos-offset="100"
-          >
+          <div class="f-col">
             <h6>About</h6>
             <p class="text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -519,12 +470,7 @@
             </p>
           </div>
 
-          <div
-            class="f-col"
-            data-aos="fade-up"
-            data-aos-delay="650"
-            data-aos-offset="100"
-          >
+          <div class="f-col">
             <h6>Categories</h6>
             <ul class="footer-links">
               <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
@@ -553,12 +499,7 @@
             </ul>
           </div>
 
-          <div
-            class="f-col"
-            data-aos="fade-up"
-            data-aos-delay="1050"
-            data-aos-offset="100"
-          >
+          <div class="f-col">
             <h6>Quick Links</h6>
             <ul class="footer-links">
               <li><a href="#">About Us</a></li>
@@ -577,7 +518,7 @@
       </div>
       <div class="container">
         <div class="f-row f-low">
-          <div class="" data-aos="fade-up" data-aos-offset="100">
+          <div class="">
             <p class="copyright-text">
               Copyright &copy; 2017 All Rights Reserved by
               <a href="#">Frazor Enterprise</a>.
@@ -585,7 +526,7 @@
           </div>
 
           <div class="">
-            <ul class="social-icons" data-aos="fade-up" data-aos-offset="100">
+            <ul class="social-icons">
               <li>
                 <a class="facebook" href="#"
                   ><i class="fab fa-facebook-f"></i
@@ -665,7 +606,9 @@
               placeholder="Your Message Here"
             ></textarea>
           </div>
-          <button class="btn btn-form" type="button">Submit</button>
+          <button class="btn btn-form" type="button" onclick="sendMail()">
+            Submit
+          </button>
         </div>
         <span class="btn-close"
           ><ion-icon name="close-circle-outline"></ion-icon
@@ -675,13 +618,6 @@
 
     <!-- JavaScript  -->
 
-    <script>
-      AOS.init({
-        offset: 240,
-        duration: 1200,
-        once: true,
-      });
-    </script>
     <script src="./js/vanilla-tilt.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -701,8 +637,8 @@
           0: {
             items: 1,
           },
-          600: {
-            items: 3,
+          700: {
+            items: 2,
           },
           1000: {
             items: 3,
