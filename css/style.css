@@ -75,6 +75,8 @@ header {
   position: fixed;
   width: 100%;
   z-index: 4;
+  top: 0;
+  left: 0;
 }
 
 nav {
@@ -133,9 +135,9 @@ nav {
   );
 }
 
-#home .container {
+/* #home .container {
   z-index: 10;
-}
+} */
 
 #scroll-gif {
   width: 65px;
@@ -1219,6 +1221,14 @@ nav {
 
   .nav-links.active {
     top: 70px;
+  }
+
+  .box-area li:nth-child(1) {
+    display: none;
+  }
+
+  .box-area li:nth-child(3) {
+    display: none;
   }
 }
 
